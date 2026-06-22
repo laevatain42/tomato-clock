@@ -4,7 +4,7 @@
 
 ## 启动
 
-双击 `Start-TomatoClock.bat`。
+双击 `Start-TomatoClock.bat`，或直接双击 `TomatoClock.exe`。
 
 启动时命令行窗口只会短暂闪一下，随后番茄浮窗会独立运行。后台不会保留可见的 cmd 或 PowerShell 窗口。
 
@@ -19,6 +19,8 @@
 - `Focus minutes`：每次工作的时间，单位是分钟。
 - `Break minutes`：每次休息的时间，单位是分钟。
 - `Apply settings`：保存新的工作/休息时间，并把当前计时归零。
+- `Startup On`：开启 Windows 登录后自动启动番茄浮窗。
+- `Startup Off`：关闭 Windows 登录后自动启动番茄浮窗。
 - `Pin`：切换窗口是否置顶。
 - `X`：关闭番茄浮窗。
 
@@ -26,19 +28,19 @@
 
 ## 开机自启动
 
-右键 `Install-Startup.ps1`，选择“使用 PowerShell 运行”。
+点击界面里的 `Startup On`。
 
 设置成功后，Windows 登录时会自动打开番茄浮窗。
 
 ## 取消开机自启动
 
-右键 `Uninstall-Startup.ps1`，选择“使用 PowerShell 运行”。
+点击界面里的 `Startup Off`。
 
 这只会删除开机启动快捷方式，不会删除番茄钟程序和你的设置。
 
 ## 完全卸载
 
-1. 如果已经设置开机自启动，先运行 `Uninstall-Startup.ps1`。
+1. 如果已经设置开机自启动，先在界面里点击 `Startup Off`。
 2. 关闭正在运行的番茄浮窗。
 3. 删除整个 `D:\tomato-clock` 文件夹。
 
@@ -50,4 +52,6 @@
 - 浮窗默认置顶，可拖动，可改变大小。
 - 支持开始、暂停、归零、切换工作/休息。
 - 设置会保存到 `settings.json`。
+- 工作计时结束进入休息时，会最小化其他窗口并显示桌面，作为全局提醒。
+- `TomatoClock.exe` 已内嵌 `tomato-clock.ico`，任务栏、托盘和自启动快捷方式都会使用番茄图标。
 - 检测到电脑休眠、息屏、锁屏/解锁或应用长时间挂起后，会自动暂停并把当前轮次从 0 重新开始。

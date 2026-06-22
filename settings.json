@@ -1,5 +1,5 @@
-﻿{
-    "BreakMinutes":  1,
-    "Topmost":  false,
-    "WorkMinutes":  20
+{
+  "WorkMinutes": 20,
+  "BreakMinutes": 1,
+  "Topmost": false
 }

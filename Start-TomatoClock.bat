@@ -1,4 +1,4 @@
 @echo off
 set "APP_DIR=%~dp0"
-wscript.exe "%APP_DIR%Start-TomatoClock.vbs"
+start "" "%APP_DIR%TomatoClock.exe"
 exit /b
